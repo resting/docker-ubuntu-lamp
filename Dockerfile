@@ -5,4 +5,7 @@ RUN  apt-get update \
     mysql-server \
     php7.0 \
     php7.0-bcmath \
-    php7.0-mcrypt \
+    php7.0-mcrypt
+COPY start-script.sh /root/
+RUN chmod +x /root/start-script.sh
+CMD /root/start-script.sh
